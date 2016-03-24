@@ -5,7 +5,7 @@ VISINA_EKRANA = 800
 
 class Interface(pygame.sprite.Sprite):
 	def __init__(self,zetoni = None):
-		super().__init()
+		super().__init__()
 		self.zetoni = zetoni
 		sirina = 150
 		visina = 300
