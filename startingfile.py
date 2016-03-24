@@ -10,6 +10,9 @@ def main():
 	konec_zanke = False
 	while not konec_zanke:
 		ura.tick(60)
+		for dogodek in pygame.event.get():
+			if dogodek.type == pygame.QUIT:
+				konec_zanke = True
 		ekran.fill((150,100,200))
 		pygame.display.flip()
 	pygame.quit()
