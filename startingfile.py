@@ -19,7 +19,7 @@ def main():
 		[SIRINA_EKRANA,VISINA_EKRANA])
 	group = pygame.sprite.Group()
 	ui = Interface()
-	skupina.add(ui)
+	group.add(ui)
 	ura = pygame.time.Clock()
 	konec_zanke = False
 	while not konec_zanke:
@@ -29,6 +29,6 @@ def main():
 				konec_zanke = True
 		ekran.fill((200,50,50))
 		pygame.display.flip()
-	skupina.draw(ekran)
+	group.draw(ekran)
 	pygame.quit()
 main()
