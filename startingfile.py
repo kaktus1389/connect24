@@ -1,17 +1,21 @@
 import pygame
  
-SIRINA_EKRANA = 600
+SIRINA_EKRANA = 800
 VISINA_EKRANA = 800
 
 class Interface(pygame.sprite.Sprite):
 	def __init__(self,zetoni = None):
 		super().__init__()
 		self.zetoni = zetoni
-		sirina = 150
-		visina = 300
+		sirina = 450
+		visina = 450
 		self.image = pygame.Surface((sirina,visina))
-		self.image.fill((255,0,0))
 		self.rect = self.image.get_rect()
+		self.image.fill((75,200,0))
+		self.rect.x = 175
+		self.rect.y = 175
+		
+		
 
 
 def main():
@@ -27,8 +31,9 @@ def main():
 		for dogodek in pygame.event.get():
 			if dogodek.type == pygame.QUIT:
 				konec_zanke = True
-		ekran.fill((200,50,50))
+		ekran.fill((50,50,255))
+		group.draw(ekran)
 		pygame.display.flip()
-	group.draw(ekran)
+		
 	pygame.quit()
 main()
